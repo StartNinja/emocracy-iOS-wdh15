@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47566AC91B35CD2E00E6954F /* ChannelListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566AC81B35CD2E00E6954F /* ChannelListController.swift */; };
+		47566ACB1B35CDBB00E6954F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566ACA1B35CDBB00E6954F /* UserDefaults.swift */; };
+		47566ACD1B35DE3C00E6954F /* VoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566ACC1B35DE3C00E6954F /* VoteController.swift */; };
 		FA2B71111B35B5D800C77CD0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B71101B35B5D800C77CD0 /* WebService.swift */; };
 		FAA94FBA1B3576B400BB669E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA94FB91B3576B400BB669E /* AppDelegate.swift */; };
-		FAA94FBC1B3576B400BB669E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA94FBB1B3576B400BB669E /* ViewController.swift */; };
+		FAA94FBC1B3576B400BB669E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA94FBB1B3576B400BB669E /* LoginController.swift */; };
 		FAA94FBF1B3576B400BB669E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA94FBD1B3576B400BB669E /* Main.storyboard */; };
 		FAA94FC11B3576B400BB669E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA94FC01B3576B400BB669E /* Images.xcassets */; };
 		FAA94FC41B3576B400BB669E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA94FC21B3576B400BB669E /* LaunchScreen.xib */; };
@@ -29,11 +32,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47566AC81B35CD2E00E6954F /* ChannelListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListController.swift; sourceTree = "<group>"; };
+		47566ACA1B35CDBB00E6954F /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		47566ACC1B35DE3C00E6954F /* VoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteController.swift; sourceTree = "<group>"; };
 		FA2B71101B35B5D800C77CD0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		FAA94FB41B3576B400BB669E /* Emocrcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emocrcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA94FB81B3576B400BB669E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA94FB91B3576B400BB669E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAA94FBB1B3576B400BB669E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAA94FBB1B3576B400BB669E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		FAA94FBE1B3576B400BB669E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAA94FC01B3576B400BB669E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FAA94FC31B3576B400BB669E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -88,12 +94,15 @@
 			isa = PBXGroup;
 			children = (
 				FAA94FB91B3576B400BB669E /* AppDelegate.swift */,
-				FAA94FBB1B3576B400BB669E /* ViewController.swift */,
+				47566AC81B35CD2E00E6954F /* ChannelListController.swift */,
+				FAA94FBB1B3576B400BB669E /* LoginController.swift */,
 				FAA94FBD1B3576B400BB669E /* Main.storyboard */,
 				FAA94FC01B3576B400BB669E /* Images.xcassets */,
 				FAA94FC21B3576B400BB669E /* LaunchScreen.xib */,
 				FAA94FB71B3576B400BB669E /* Supporting Files */,
 				FA2B71101B35B5D800C77CD0 /* WebService.swift */,
+				47566ACA1B35CDBB00E6954F /* UserDefaults.swift */,
+				47566ACC1B35DE3C00E6954F /* VoteController.swift */,
 			);
 			path = Emocrcy;
 			sourceTree = "<group>";
@@ -245,8 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2B71111B35B5D800C77CD0 /* WebService.swift in Sources */,
-				FAA94FBC1B3576B400BB669E /* ViewController.swift in Sources */,
+				47566ACB1B35CDBB00E6954F /* UserDefaults.swift in Sources */,
+				FAA94FBC1B3576B400BB669E /* LoginController.swift in Sources */,
+				47566ACD1B35DE3C00E6954F /* VoteController.swift in Sources */,
 				FAA94FBA1B3576B400BB669E /* AppDelegate.swift in Sources */,
+				47566AC91B35CD2E00E6954F /* ChannelListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

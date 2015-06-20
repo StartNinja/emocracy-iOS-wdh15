@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>92335D0B-8F79-442F-BDC0-AD6BD24C0518</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Emocrcy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>02A7F451D34B4E6A9C56A11539F2BFA214480D30</key>
+		<string>https://github.com/StartNinja/emocracy-iOS-wdh15.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Emocrcy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>02A7F451D34B4E6A9C56A11539F2BFA214480D30</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/StartNinja/emocracy-iOS-wdh15.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>02A7F451D34B4E6A9C56A11539F2BFA214480D30</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>02A7F451D34B4E6A9C56A11539F2BFA214480D30</string>
+			<key>IDESourceControlWCCName</key>
+			<string>emocracy-iOS-wdh15</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -15,6 +15,12 @@ struct WebService {
     static let baseUrl = "http://192.168.170.47:8080/emocracy/api/"
     
     static let registerUrl = "http://192.168.170.47:8080/emocracy/api/register"
+
+    static let channelUrl = "http://192.168.170.47:8080/emocracy/api/channels"
+
+    static let voteUrl = "http://192.168.170.47:8080/emocracy/api/vote"
+
+    
     
     static func getApi() {
         Alamofire.request(.GET, baseUrl).responseString { (_, _, s, _) in
@@ -29,24 +35,45 @@ struct WebService {
         }
     }
     
-    static func register(name: String) -> Bool {
-        
+    static func register(name: String, callback: User -> Void) -> Void {
         Alamofire.request(.GET, "\(registerUrl)/\(name)").responseString { (_, _, s, _) in
             if let json = s,
                 let user = Mapper<User>().map(json) {
-                    println("call \(user.id)")
-                    
+                   callback(user)
             }
         }
-        
-        return true
+    }
+
+    
+    static func channels(callback: [Channel] -> Void) -> Void {
+        if let userId = UserDefaults.userId {
+            Alamofire.request(.GET, "\(channelUrl)/\(userId)").responseString { (_, _, s, _) in
+                if let json = s,
+                    let channelcall = Mapper<ChannelCall>().map(json),
+                    let channels = channelcall.channels {
+                        callback(channels)
+                }
+            }
+        }
     }
     
+    static func vote(channel: Channel, answer: Int, callback: () -> Void) -> Void {
+        
+        if let userId = UserDefaults.userId,
+                let channelId = channel.id {
+                    let url = "\(voteUrl)/\(userId)/\(channelId)/\(answer)"
+            Alamofire.request(.GET, url).responseString { (_, _, s, _) in
+                callback()
+            }
+        }
+    }
+
 }
 
 
 struct User: Mappable {
     var id: Int?
+    var username: String?
     
     init(){}
     
@@ -56,6 +83,41 @@ struct User: Mappable {
     
     mutating func mapping(map: Map) {
         id <- map["id"]
+        username <- map["username"]
+    }
+}
+
+/*
+
+"name": "Hungry?",
+"id": 2,
+"yes": 10,
+"no": 1,
+"alive": 1,
+"democracy": 1
+*/
+
+struct Channel: Mappable {
+    var name: String?
+    var id: Int?
+    var yes: Int?
+    var no: Int?
+    var alive: Int?
+    var democracy: Int?
+    
+    init(){}
+    
+    init?(_ map: Map) {
+        mapping(map)
+    }
+    
+    mutating func mapping(map: Map) {
+        name <- map["name"]
+        id <- map["id"]
+        yes <- map["yes"]
+        no <- map["no"]
+        alive <- map["alive"]
+        democracy <- map["democracy"]
     }
 }
 
@@ -88,6 +150,21 @@ struct ApiCall: Mappable {
         name <- map["name"]
         info <- map["info"]
         url <- map["url"]
+    }
+}
+
+
+struct ChannelCall: Mappable {
+    var channels: [Channel]?
+    
+    init(){}
+    
+    init?(_ map: Map) {
+        mapping(map)
+    }
+    
+    mutating func mapping(map: Map) {
+        channels <- map["channels"]
     }
 }
 
