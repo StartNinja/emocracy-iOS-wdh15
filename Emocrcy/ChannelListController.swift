@@ -54,7 +54,12 @@ class ChannelListController: UITableViewController {
     func initData(){
         WebService.channels { [weak self] in
             self?.channels = $0
+            
+            
+
         }
+        UILocalNotification.notify()
+
     }
 
     // MARK: - Table view data source

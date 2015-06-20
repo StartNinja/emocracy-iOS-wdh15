@@ -17,6 +17,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+        var acceptAction = UIMutableUserNotificationAction()
+        acceptAction.title = NSLocalizedString("Accept", comment: "Accept invitation")
+        acceptAction.identifier = "accept"
+        acceptAction.activationMode = UIUserNotificationActivationMode.Background
+        acceptAction.authenticationRequired = false
+        
+        var declineAction = UIMutableUserNotificationAction()
+        declineAction.title = NSLocalizedString("Decline", comment: "Decline invitation")
+        declineAction.identifier = "decline"
+        declineAction.activationMode = UIUserNotificationActivationMode.Background
+        declineAction.authenticationRequired = false
+        
+        var inviteCategory = UIMutableUserNotificationCategory()
+        inviteCategory.setActions([acceptAction, declineAction],
+            forContext: UIUserNotificationActionContext.Default)
+        inviteCategory.identifier = "invitation"
+        
+        var categories = Set<UIMutableUserNotificationCategory>()
+        categories.insert(inviteCategory)
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Sound | .Alert | .Badge, categories:categories))
+
         return true
     }
 
@@ -42,6 +67,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+ 
+    func sendLocalNotification(){
+
+       
+        
+    }
+    
+    
 
 }
 

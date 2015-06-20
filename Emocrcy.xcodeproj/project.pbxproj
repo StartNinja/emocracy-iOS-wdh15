@@ -10,6 +10,19 @@
 		47566AC91B35CD2E00E6954F /* ChannelListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566AC81B35CD2E00E6954F /* ChannelListController.swift */; };
 		47566ACB1B35CDBB00E6954F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566ACA1B35CDBB00E6954F /* UserDefaults.swift */; };
 		47566ACD1B35DE3C00E6954F /* VoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566ACC1B35DE3C00E6954F /* VoteController.swift */; };
+		47566AD81B35EB9600E6954F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566AD71B35EB9600E6954F /* InterfaceController.swift */; };
+		47566ADA1B35EB9600E6954F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566AD91B35EB9600E6954F /* NotificationController.swift */; };
+		47566ADC1B35EB9600E6954F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47566ADB1B35EB9600E6954F /* Images.xcassets */; };
+		47566AE01B35EB9600E6954F /* Emocrcy WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 47566ADF1B35EB9600E6954F /* Emocrcy WatchKit App.app */; };
+		47566AE81B35EB9600E6954F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47566AE61B35EB9600E6954F /* Interface.storyboard */; };
+		47566AEA1B35EB9700E6954F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47566AE91B35EB9600E6954F /* Images.xcassets */; };
+		47566AED1B35EB9700E6954F /* Emocrcy WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47566AD21B35EB9600E6954F /* Emocrcy WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		47566AFF1B35EC7700E6954F /* EmocracyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 47566AFE1B35EC7700E6954F /* EmocracyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47566B051B35EC7700E6954F /* EmocracyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47566AFA1B35EC7700E6954F /* EmocracyFramework.framework */; };
+		47566B0E1B35EC7700E6954F /* EmocracyFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566B0D1B35EC7700E6954F /* EmocracyFrameworkTests.swift */; };
+		47566B111B35EC7700E6954F /* EmocracyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47566AFA1B35EC7700E6954F /* EmocracyFramework.framework */; };
+		47566B121B35EC7700E6954F /* EmocracyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47566AFA1B35EC7700E6954F /* EmocracyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47566B1D1B35F31900E6954F /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47566B1C1B35F31900E6954F /* NotificationExtension.swift */; };
 		FA2B71111B35B5D800C77CD0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B71101B35B5D800C77CD0 /* WebService.swift */; };
 		FAA94FBA1B3576B400BB669E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA94FB91B3576B400BB669E /* AppDelegate.swift */; };
 		FAA94FBC1B3576B400BB669E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA94FBB1B3576B400BB669E /* LoginController.swift */; };
@@ -22,6 +35,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		47566AE11B35EB9600E6954F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA94FAC1B3576B300BB669E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47566ADE1B35EB9600E6954F;
+			remoteInfo = "Emocrcy WatchKit App";
+		};
+		47566AEB1B35EB9700E6954F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA94FAC1B3576B300BB669E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47566AD11B35EB9600E6954F;
+			remoteInfo = "Emocrcy WatchKit Extension";
+		};
+		47566B061B35EC7700E6954F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA94FAC1B3576B300BB669E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47566AF91B35EC7700E6954F;
+			remoteInfo = EmocracyFramework;
+		};
+		47566B081B35EC7700E6954F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA94FAC1B3576B300BB669E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA94FB31B3576B300BB669E;
+			remoteInfo = Emocrcy;
+		};
+		47566B0F1B35EC7700E6954F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA94FAC1B3576B300BB669E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47566AF91B35EC7700E6954F;
+			remoteInfo = EmocracyFramework;
+		};
 		FAA94FCA1B3576B400BB669E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAA94FAC1B3576B300BB669E /* Project object */;
@@ -31,10 +79,52 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		47566AF41B35EB9700E6954F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				47566AED1B35EB9700E6954F /* Emocrcy WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47566B161B35EC7700E6954F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				47566B121B35EC7700E6954F /* EmocracyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		47566AC81B35CD2E00E6954F /* ChannelListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListController.swift; sourceTree = "<group>"; };
 		47566ACA1B35CDBB00E6954F /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		47566ACC1B35DE3C00E6954F /* VoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteController.swift; sourceTree = "<group>"; };
+		47566AD21B35EB9600E6954F /* Emocrcy WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Emocrcy WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47566AD51B35EB9600E6954F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47566AD61B35EB9600E6954F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		47566AD71B35EB9600E6954F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		47566AD91B35EB9600E6954F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		47566ADB1B35EB9600E6954F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47566ADF1B35EB9600E6954F /* Emocrcy WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emocrcy WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47566AE51B35EB9600E6954F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47566AE71B35EB9600E6954F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		47566AE91B35EB9600E6954F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47566AFA1B35EC7700E6954F /* EmocracyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmocracyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47566AFD1B35EC7700E6954F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47566AFE1B35EC7700E6954F /* EmocracyFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmocracyFramework.h; sourceTree = "<group>"; };
+		47566B041B35EC7700E6954F /* EmocracyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmocracyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47566B0C1B35EC7700E6954F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47566B0D1B35EC7700E6954F /* EmocracyFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmocracyFrameworkTests.swift; sourceTree = "<group>"; };
+		47566B1C1B35F31900E6954F /* NotificationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		FA2B71101B35B5D800C77CD0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		FAA94FB41B3576B400BB669E /* Emocrcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emocrcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA94FB81B3576B400BB669E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,10 +141,33 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		47566ACF1B35EB9600E6954F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47566AF61B35EC7700E6954F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47566B011B35EC7700E6954F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47566B051B35EC7700E6954F /* EmocracyFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA94FB11B3576B300BB669E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47566B111B35EC7700E6954F /* EmocracyFramework.framework in Frameworks */,
 				FAA94FE61B35A7A800BB669E /* Alamofire.framework in Frameworks */,
 				FAA94FE71B35A7A800BB669E /* ObjectMapper.framework in Frameworks */,
 			);
@@ -70,6 +183,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47566AD31B35EB9600E6954F /* Emocrcy WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				47566AD71B35EB9600E6954F /* InterfaceController.swift */,
+				47566AD91B35EB9600E6954F /* NotificationController.swift */,
+				47566ADB1B35EB9600E6954F /* Images.xcassets */,
+				47566AD41B35EB9600E6954F /* Supporting Files */,
+			);
+			path = "Emocrcy WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		47566AD41B35EB9600E6954F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47566AD51B35EB9600E6954F /* Info.plist */,
+				47566AD61B35EB9600E6954F /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47566AE31B35EB9600E6954F /* Emocrcy WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				47566AE61B35EB9600E6954F /* Interface.storyboard */,
+				47566AE91B35EB9600E6954F /* Images.xcassets */,
+				47566AE41B35EB9600E6954F /* Supporting Files */,
+			);
+			path = "Emocrcy WatchKit App";
+			sourceTree = "<group>";
+		};
+		47566AE41B35EB9600E6954F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47566AE51B35EB9600E6954F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47566AFB1B35EC7700E6954F /* EmocracyFramework */ = {
+			isa = PBXGroup;
+			children = (
+				47566AFE1B35EC7700E6954F /* EmocracyFramework.h */,
+				47566AFC1B35EC7700E6954F /* Supporting Files */,
+			);
+			path = EmocracyFramework;
+			sourceTree = "<group>";
+		};
+		47566AFC1B35EC7700E6954F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47566AFD1B35EC7700E6954F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47566B0A1B35EC7700E6954F /* EmocracyFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				47566B0D1B35EC7700E6954F /* EmocracyFrameworkTests.swift */,
+				47566B0B1B35EC7700E6954F /* Supporting Files */,
+			);
+			path = EmocracyFrameworkTests;
+			sourceTree = "<group>";
+		};
+		47566B0B1B35EC7700E6954F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47566B0C1B35EC7700E6954F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		FAA94FAB1B3576B300BB669E = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +262,10 @@
 				FAA94FE51B35A7A800BB669E /* ObjectMapper.framework */,
 				FAA94FB61B3576B400BB669E /* Emocrcy */,
 				FAA94FCC1B3576B400BB669E /* EmocrcyTests */,
+				47566AD31B35EB9600E6954F /* Emocrcy WatchKit Extension */,
+				47566AE31B35EB9600E6954F /* Emocrcy WatchKit App */,
+				47566AFB1B35EC7700E6954F /* EmocracyFramework */,
+				47566B0A1B35EC7700E6954F /* EmocracyFrameworkTests */,
 				FAA94FB51B3576B400BB669E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +275,10 @@
 			children = (
 				FAA94FB41B3576B400BB669E /* Emocrcy.app */,
 				FAA94FC91B3576B400BB669E /* EmocrcyTests.xctest */,
+				47566AD21B35EB9600E6954F /* Emocrcy WatchKit Extension.appex */,
+				47566ADF1B35EB9600E6954F /* Emocrcy WatchKit App.app */,
+				47566AFA1B35EC7700E6954F /* EmocracyFramework.framework */,
+				47566B041B35EC7700E6954F /* EmocracyFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +296,7 @@
 				FA2B71101B35B5D800C77CD0 /* WebService.swift */,
 				47566ACA1B35CDBB00E6954F /* UserDefaults.swift */,
 				47566ACC1B35DE3C00E6954F /* VoteController.swift */,
+				47566B1C1B35F31900E6954F /* NotificationExtension.swift */,
 			);
 			path = Emocrcy;
 			sourceTree = "<group>";
@@ -134,7 +328,88 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		47566AF71B35EC7700E6954F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47566AFF1B35EC7700E6954F /* EmocracyFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		47566AD11B35EB9600E6954F /* Emocrcy WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47566AF11B35EB9700E6954F /* Build configuration list for PBXNativeTarget "Emocrcy WatchKit Extension" */;
+			buildPhases = (
+				47566ACE1B35EB9600E6954F /* Sources */,
+				47566ACF1B35EB9600E6954F /* Frameworks */,
+				47566AD01B35EB9600E6954F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47566AE21B35EB9600E6954F /* PBXTargetDependency */,
+			);
+			name = "Emocrcy WatchKit Extension";
+			productName = "Emocrcy WatchKit Extension";
+			productReference = 47566AD21B35EB9600E6954F /* Emocrcy WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		47566ADE1B35EB9600E6954F /* Emocrcy WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47566AEE1B35EB9700E6954F /* Build configuration list for PBXNativeTarget "Emocrcy WatchKit App" */;
+			buildPhases = (
+				47566ADD1B35EB9600E6954F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Emocrcy WatchKit App";
+			productName = "Emocrcy WatchKit App";
+			productReference = 47566ADF1B35EB9600E6954F /* Emocrcy WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+		47566AF91B35EC7700E6954F /* EmocracyFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47566B131B35EC7700E6954F /* Build configuration list for PBXNativeTarget "EmocracyFramework" */;
+			buildPhases = (
+				47566AF51B35EC7700E6954F /* Sources */,
+				47566AF61B35EC7700E6954F /* Frameworks */,
+				47566AF71B35EC7700E6954F /* Headers */,
+				47566AF81B35EC7700E6954F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmocracyFramework;
+			productName = EmocracyFramework;
+			productReference = 47566AFA1B35EC7700E6954F /* EmocracyFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		47566B031B35EC7700E6954F /* EmocracyFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47566B171B35EC7700E6954F /* Build configuration list for PBXNativeTarget "EmocracyFrameworkTests" */;
+			buildPhases = (
+				47566B001B35EC7700E6954F /* Sources */,
+				47566B011B35EC7700E6954F /* Frameworks */,
+				47566B021B35EC7700E6954F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47566B071B35EC7700E6954F /* PBXTargetDependency */,
+				47566B091B35EC7700E6954F /* PBXTargetDependency */,
+			);
+			name = EmocracyFrameworkTests;
+			productName = EmocracyFrameworkTests;
+			productReference = 47566B041B35EC7700E6954F /* EmocracyFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FAA94FB31B3576B300BB669E /* Emocrcy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA94FD31B3576B400BB669E /* Build configuration list for PBXNativeTarget "Emocrcy" */;
@@ -143,10 +418,14 @@
 				FAA94FB11B3576B300BB669E /* Frameworks */,
 				FAA94FB21B3576B300BB669E /* Resources */,
 				FAA94FD91B359D3200BB669E /* Run Script */,
+				47566AF41B35EB9700E6954F /* Embed App Extensions */,
+				47566B161B35EC7700E6954F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				47566AEC1B35EB9700E6954F /* PBXTargetDependency */,
+				47566B101B35EC7700E6954F /* PBXTargetDependency */,
 			);
 			name = Emocrcy;
 			productName = Emocrcy;
@@ -180,9 +459,25 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Stavros Filippidis";
 				TargetAttributes = {
+					47566AD11B35EB9600E6954F = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = A8GCV2M324;
+					};
+					47566ADE1B35EB9600E6954F = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = A8GCV2M324;
+					};
+					47566AF91B35EC7700E6954F = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = A8GCV2M324;
+					};
+					47566B031B35EC7700E6954F = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = FAA94FB31B3576B300BB669E;
+					};
 					FAA94FB31B3576B300BB669E = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = E7ZDN4X53V;
+						DevelopmentTeam = A8GCV2M324;
 					};
 					FAA94FC81B3576B400BB669E = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -205,11 +500,47 @@
 			targets = (
 				FAA94FB31B3576B300BB669E /* Emocrcy */,
 				FAA94FC81B3576B400BB669E /* EmocrcyTests */,
+				47566AD11B35EB9600E6954F /* Emocrcy WatchKit Extension */,
+				47566ADE1B35EB9600E6954F /* Emocrcy WatchKit App */,
+				47566AF91B35EC7700E6954F /* EmocracyFramework */,
+				47566B031B35EC7700E6954F /* EmocracyFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		47566AD01B35EB9600E6954F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47566ADC1B35EB9600E6954F /* Images.xcassets in Resources */,
+				47566AE01B35EB9600E6954F /* Emocrcy WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47566ADD1B35EB9600E6954F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47566AE81B35EB9600E6954F /* Interface.storyboard in Resources */,
+				47566AEA1B35EB9700E6954F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47566AF81B35EC7700E6954F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47566B021B35EC7700E6954F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA94FB21B3576B300BB669E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +580,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		47566ACE1B35EB9600E6954F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47566ADA1B35EB9600E6954F /* NotificationController.swift in Sources */,
+				47566AD81B35EB9600E6954F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47566AF51B35EC7700E6954F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47566B001B35EC7700E6954F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47566B0E1B35EC7700E6954F /* EmocracyFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA94FB01B3576B300BB669E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +613,7 @@
 				FAA94FBC1B3576B400BB669E /* LoginController.swift in Sources */,
 				47566ACD1B35DE3C00E6954F /* VoteController.swift in Sources */,
 				FAA94FBA1B3576B400BB669E /* AppDelegate.swift in Sources */,
+				47566B1D1B35F31900E6954F /* NotificationExtension.swift in Sources */,
 				47566AC91B35CD2E00E6954F /* ChannelListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +629,31 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		47566AE21B35EB9600E6954F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47566ADE1B35EB9600E6954F /* Emocrcy WatchKit App */;
+			targetProxy = 47566AE11B35EB9600E6954F /* PBXContainerItemProxy */;
+		};
+		47566AEC1B35EB9700E6954F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47566AD11B35EB9600E6954F /* Emocrcy WatchKit Extension */;
+			targetProxy = 47566AEB1B35EB9700E6954F /* PBXContainerItemProxy */;
+		};
+		47566B071B35EC7700E6954F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47566AF91B35EC7700E6954F /* EmocracyFramework */;
+			targetProxy = 47566B061B35EC7700E6954F /* PBXContainerItemProxy */;
+		};
+		47566B091B35EC7700E6954F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA94FB31B3576B300BB669E /* Emocrcy */;
+			targetProxy = 47566B081B35EC7700E6954F /* PBXContainerItemProxy */;
+		};
+		47566B101B35EC7700E6954F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47566AF91B35EC7700E6954F /* EmocracyFramework */;
+			targetProxy = 47566B0F1B35EC7700E6954F /* PBXContainerItemProxy */;
+		};
 		FAA94FCB1B3576B400BB669E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAA94FB31B3576B300BB669E /* Emocrcy */;
@@ -281,6 +662,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		47566AE61B35EB9600E6954F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47566AE71B35EB9600E6954F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		FAA94FBD1B3576B400BB669E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,6 +689,147 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		47566AEF1B35EB9700E6954F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Emocrcy_WatchKit_Extension;
+				INFOPLIST_FILE = "Emocrcy WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		47566AF01B35EB9700E6954F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IBSC_MODULE = Emocrcy_WatchKit_Extension;
+				INFOPLIST_FILE = "Emocrcy WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		47566AF21B35EB9700E6954F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Emocrcy WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		47566AF31B35EB9700E6954F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Emocrcy WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		47566B141B35EC7700E6954F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmocracyFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47566B151B35EC7700E6954F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EmocracyFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		47566B181B35EC7700E6954F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmocracyFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emocrcy.app/Emocrcy";
+			};
+			name = Debug;
+		};
+		47566B191B35EC7700E6954F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmocracyFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emocrcy.app/Emocrcy";
+			};
+			name = Release;
+		};
 		FAA94FD11B3576B400BB669E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -457,6 +987,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		47566AEE1B35EB9700E6954F /* Build configuration list for PBXNativeTarget "Emocrcy WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47566AEF1B35EB9700E6954F /* Debug */,
+				47566AF01B35EB9700E6954F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47566AF11B35EB9700E6954F /* Build configuration list for PBXNativeTarget "Emocrcy WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47566AF21B35EB9700E6954F /* Debug */,
+				47566AF31B35EB9700E6954F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47566B131B35EC7700E6954F /* Build configuration list for PBXNativeTarget "EmocracyFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47566B141B35EC7700E6954F /* Debug */,
+				47566B151B35EC7700E6954F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47566B171B35EC7700E6954F /* Build configuration list for PBXNativeTarget "EmocracyFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47566B181B35EC7700E6954F /* Debug */,
+				47566B191B35EC7700E6954F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAA94FAF1B3576B300BB669E /* Build configuration list for PBXProject "Emocrcy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
