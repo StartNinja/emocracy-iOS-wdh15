@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2B71111B35B5D800C77CD0 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B71101B35B5D800C77CD0 /* WebService.swift */; };
 		FAA94FBA1B3576B400BB669E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA94FB91B3576B400BB669E /* AppDelegate.swift */; };
 		FAA94FBC1B3576B400BB669E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA94FBB1B3576B400BB669E /* ViewController.swift */; };
 		FAA94FBF1B3576B400BB669E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA94FBD1B3576B400BB669E /* Main.storyboard */; };
 		FAA94FC11B3576B400BB669E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA94FC01B3576B400BB669E /* Images.xcassets */; };
 		FAA94FC41B3576B400BB669E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA94FC21B3576B400BB669E /* LaunchScreen.xib */; };
 		FAA94FD01B3576B400BB669E /* EmocrcyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA94FCF1B3576B400BB669E /* EmocrcyTests.swift */; };
+		FAA94FE61B35A7A800BB669E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA94FE41B35A7A800BB669E /* Alamofire.framework */; };
+		FAA94FE71B35A7A800BB669E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA94FE51B35A7A800BB669E /* ObjectMapper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA2B71101B35B5D800C77CD0 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		FAA94FB41B3576B400BB669E /* Emocrcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emocrcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA94FB81B3576B400BB669E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA94FB91B3576B400BB669E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		FAA94FC91B3576B400BB669E /* EmocrcyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmocrcyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA94FCE1B3576B400BB669E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA94FCF1B3576B400BB669E /* EmocrcyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmocrcyTests.swift; sourceTree = "<group>"; };
+		FAA94FE41B35A7A800BB669E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		FAA94FE51B35A7A800BB669E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA94FE61B35A7A800BB669E /* Alamofire.framework in Frameworks */,
+				FAA94FE71B35A7A800BB669E /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,8 @@
 		FAA94FAB1B3576B300BB669E = {
 			isa = PBXGroup;
 			children = (
+				FAA94FE41B35A7A800BB669E /* Alamofire.framework */,
+				FAA94FE51B35A7A800BB669E /* ObjectMapper.framework */,
 				FAA94FB61B3576B400BB669E /* Emocrcy */,
 				FAA94FCC1B3576B400BB669E /* EmocrcyTests */,
 				FAA94FB51B3576B400BB669E /* Products */,
@@ -83,6 +93,7 @@
 				FAA94FC01B3576B400BB669E /* Images.xcassets */,
 				FAA94FC21B3576B400BB669E /* LaunchScreen.xib */,
 				FAA94FB71B3576B400BB669E /* Supporting Files */,
+				FA2B71101B35B5D800C77CD0 /* WebService.swift */,
 			);
 			path = Emocrcy;
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 				FAA94FB01B3576B300BB669E /* Sources */,
 				FAA94FB11B3576B300BB669E /* Frameworks */,
 				FAA94FB21B3576B300BB669E /* Resources */,
+				FAA94FD91B359D3200BB669E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -161,6 +173,7 @@
 				TargetAttributes = {
 					FAA94FB31B3576B300BB669E = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = E7ZDN4X53V;
 					};
 					FAA94FC81B3576B400BB669E = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -207,11 +220,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FAA94FD91B359D3200BB669E /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAA94FB01B3576B300BB669E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2B71111B35B5D800C77CD0 /* WebService.swift in Sources */,
 				FAA94FBC1B3576B400BB669E /* ViewController.swift in Sources */,
 				FAA94FBA1B3576B400BB669E /* AppDelegate.swift in Sources */,
 			);
@@ -342,9 +375,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Emocrcy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,9 +393,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libraries/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Emocrcy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +461,7 @@
 				FAA94FD51B3576B400BB669E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAA94FD61B3576B400BB669E /* Build configuration list for PBXNativeTarget "EmocrcyTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +470,7 @@
 				FAA94FD81B3576B400BB669E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
