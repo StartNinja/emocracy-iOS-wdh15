@@ -68,10 +68,61 @@ class WebService: NSObject {
                 if let json = s,
                     let channelcall = Mapper<ChannelCall>().map(json),
                     let channels = channelcall.channels {
+                        self.storeChannels(channels)
                         callback(channels)
                 }
             }
         }
+    }
+    
+    static let k_channelTimestamp = "timestamp"
+    static let k_channelId = "channelId"
+    static let k_channelAlive = "channelAlive"
+    static let k_channelDemocracy = "channelDemocracy"
+
+    static func storeChannels(channels: [Channel]){
+        
+        var incomingChannels = ChannelsMap()
+        var previousChannels = UserDefaults.channels
+        
+        for channel in channels {
+            
+            let timestamp = channel.timestamp
+            let channelId = "\(channel.id!)"
+            let channelDemocracy = channel.democracy
+            let channelAlive = channel.alive
+            
+            let pcm = previousChannels?[channelId]
+            let pcd = pcm?[k_channelDemocracy]
+            let pci = pcm?[k_channelId]
+            let pct = pcm?[k_channelTimestamp]
+            let pca = pcm?[k_channelAlive]
+            
+            // 1. pca == 0 && ca == 1
+            // 2. pcd == 0 && cd == 1
+            switch (pca, channelAlive, pcd, channelDemocracy) {
+            case (.Some(0), .Some(1), _, _):
+                println("notify")
+            case (_, _, .None, .Some(1)):
+                println("yes won")
+            case (_, _, .None, .Some(0)):
+                println("no won")
+            default:
+                break
+            }
+            
+            var cm: [String:Int] = [String:Int]()
+            cm[k_channelAlive] = channelAlive!
+            
+            if let democracy = channelDemocracy {
+                cm[k_channelDemocracy] = democracy
+            }
+            incomingChannels[channelId] = cm
+            
+        }
+        
+        println("try to store \(incomingChannels)")
+        UserDefaults.channels = incomingChannels
     }
     
     static func vote(channel: Channel, answer: Int, callback: () -> Void) -> Void {
@@ -121,6 +172,7 @@ class Channel: Mappable {
     var no: Int?
     var alive: Int?
     var democracy: Int?
+    var timestamp: Int?
     
     init(){}
     
@@ -135,6 +187,7 @@ class Channel: Mappable {
         no <- map["no"]
         alive <- map["alive"]
         democracy <- map["democracy"]
+        timestamp <- map["timestamp"]
     }
 }
 

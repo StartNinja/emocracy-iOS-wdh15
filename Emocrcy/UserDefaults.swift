@@ -8,11 +8,26 @@
 
 import Foundation
 
+public typealias ChannelsMap = [String:[String:Int]]
 
 public struct UserDefaults {
     
     private static let _username = "username"
     private static let _userId = "userId"
+    private static let __channels = "channels"
+    
+    
+    public static var channels: ChannelsMap? {
+        get {
+            if let m = NSUserDefaults.standardUserDefaults().objectForKey(__channels) as? ChannelsMap {
+            return m
+        }
+        return nil
+        }
+        set(newValue) {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey:__channels)
+        }
+    }
     
     public static var username: String? {
         get {
@@ -40,5 +55,4 @@ public struct UserDefaults {
         }
     }
     
-
 }
