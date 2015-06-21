@@ -48,7 +48,7 @@ class ChannelListController: UITableViewController {
                     println("channel with id \(cid) is alive")
                     let channel = channels[0]
                     
-                    let title = "\(channel.name)"
+                    let title = "\(channel.name!)"
                     let body = "What about you?"
                     UILocalNotification.notify(title, body:body, channelId:cid)
             }
@@ -62,7 +62,7 @@ class ChannelListController: UITableViewController {
                 let channels = self.channels?.filter({ $0.id! == cid }){
                     
                     let channel = channels[0]
-                    let title = "\(channel.name)"
+                    let title = "\(channel.name!)"
                     
                     let body: String
                     switch democracy {
@@ -130,13 +130,20 @@ class ChannelListController: UITableViewController {
         
         println("icon_\(channel?.id!)_white")
         cell.channelImageView.image = UIImage(named: "icon_\(channel!.id!)_white")
+       
+        if let alive = channel?.alive where alive == 1 {
+            cell.backgroundColor = UIColor.colorWithHexString("#ffba00")!
+        } else {
+            cell.backgroundColor = UIColor.colorWithHexString("#9d9d9d")!
+        }
+        
         switch channel?.democracy {
         case .Some(1):
             cell.backgroundColor = UIColor.colorWithHexString("#00df90")!
         case .Some(0):
             cell.backgroundColor = UIColor.colorWithHexString("#00df90")!
         default:
-            cell.backgroundColor = UIColor.colorWithHexString("#9d9d9d")!
+            break
         }
         return cell
     }

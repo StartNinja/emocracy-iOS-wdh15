@@ -12,6 +12,7 @@ class VoteController: UIViewController {
     
     @IBOutlet weak var channelLabel: UILabel!
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     
@@ -19,6 +20,7 @@ class VoteController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.channelLabel.text = channel?.name
+        self.imageView.image = UIImage(named: "icon_\(channel!.id!)")
     }
     
     
@@ -26,6 +28,7 @@ class VoteController: UIViewController {
         if let channel = channel {
             WebService.vote(channel, answer: 1){
                 println("done")
+                self.navigationController?.popToRootViewControllerAnimated(true)
             }
         }
     }
@@ -34,6 +37,7 @@ class VoteController: UIViewController {
         if let channel = channel {
             WebService.vote(channel, answer: 0){
                 println("done")
+                                self.navigationController?.popToRootViewControllerAnimated(true)
             }
         }
     }

@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "icon_yes_white-1.png"
+      "filename" : "icon_1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "icon_yes_white.png"
+      "filename" : "icon_1-1.png"
     },
     {
       "idiom" : "universal",
@@ -17,7 +17,6 @@
   ],
   "info" : {
     "version" : 1,
-    "author" : "xcode",
-    "template-rendering-intent" : "template"
+    "author" : "xcode"
   }
 }
