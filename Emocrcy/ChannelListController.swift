@@ -95,6 +95,14 @@ class ChannelListController: UITableViewController {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if UserDefaults.userId != nil {
+            initData()
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

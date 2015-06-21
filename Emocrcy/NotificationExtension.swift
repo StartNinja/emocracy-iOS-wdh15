@@ -15,7 +15,7 @@ extension UILocalNotification {
         
         let notification = UILocalNotification()
         notification.alertBody = body
-        notification.fireDate = NSDate().dateByAddingTimeInterval(10)
+        notification.fireDate = NSDate().dateByAddingTimeInterval(4)
         notification.timeZone = NSTimeZone.defaultTimeZone()
         notification.alertTitle = title
         notification.userInfo = ["channelId":channelId]
