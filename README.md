@@ -34,6 +34,13 @@ Cool Graphics and Sound FX
 
 **Challenges & solutions:** What was the most difficult part of the project? What problems did you encounter? How did you solve them?
 
+Trouble with iOS Notification. Help from Marco (Developer). 
+Wanted to add lots of features -> lack of time. 
+
+
+
+
+
 **Scalability:** How can the project be further developed?
 
 ##Code:
@@ -45,7 +52,8 @@ Lots of Google and Apple Tech
 
 
 
-**Link:** Please insert the deployment link. This is crucial. Try not to host things just locally.
+**Link:** Install for Android: http://bit.ly/1GexEon 
+          Servercode on Github : https://github.com/elm4ward/emocracy-server-wdh15.git
 
 **Team:**
 Team members, their skills & Twitter handles:
