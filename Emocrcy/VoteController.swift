@@ -25,8 +25,8 @@ class VoteController: UIViewController {
     
     
     @IBAction func didClickYes(sender: AnyObject) {
-        if let channel = channel {
-            WebService.vote(channel, answer: 1){
+        if let channelId = channel?.id {
+            WebService.vote(channelId, answer: 1){
                 println("done")
                 self.navigationController?.popToRootViewControllerAnimated(true)
             }
@@ -34,8 +34,8 @@ class VoteController: UIViewController {
     }
 
     @IBAction func didClickNo(sender: AnyObject) {
-        if let channel = channel {
-            WebService.vote(channel, answer: 0){
+        if let channelId = channel?.id {
+            WebService.vote(channelId, answer: 0){
                 println("done")
                                 self.navigationController?.popToRootViewControllerAnimated(true)
             }

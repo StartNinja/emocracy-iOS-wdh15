@@ -50,7 +50,7 @@ class ChannelListController: UITableViewController {
                     
                     let title = "\(channel.name!)"
                     let body = "What about you?"
-                    UILocalNotification.notify(title, body:body, channelId:cid)
+                    UILocalNotification.notify(title, body:body, channelId:cid, withAction:true)
             }
         })
         
@@ -73,7 +73,7 @@ class ChannelListController: UITableViewController {
                     default:
                         body = ""
                     }
-                    UILocalNotification.notify(title, body:body, channelId:cid)
+                    UILocalNotification.notify(title, body:body, channelId:cid, withAction:false)
                     println("channel with id \(cid) has decided \(democracy)")
                     
             }
@@ -128,7 +128,6 @@ class ChannelListController: UITableViewController {
                 cell.channelState?.text = "\(yes):\(no)"
         }
         
-        println("icon_\(channel?.id!)_white")
         cell.channelImageView.image = UIImage(named: "icon_\(channel!.id!)_white")
        
         if let alive = channel?.alive where alive == 1 {

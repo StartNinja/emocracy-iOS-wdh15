@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Emocrcy/NotificationExtension.swift"
-            timestampString = "456523425.698221"
+            timestampString = "456573784.347243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "notify(_:body:channelId:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "notify(_:body:channelId:withAction:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,12 +138,154 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Emocrcy/ChannelListController.swift"
-            timestampString = "456573055.226858"
+            timestampString = "456574272.76854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Emocrcy/AppDelegate.swift"
+            timestampString = "456574431.493078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "application(_:handleActionWithIdentifier:forLocalNotification:completionHandler:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Emocrcy.AppDelegate.application (Emocrcy.AppDelegate)(ObjectiveC.UIApplication, handleActionWithIdentifier : Swift.Optional&lt;Swift.String&gt;, forLocalNotification : ObjectiveC.UILocalNotification, completionHandler : () -&gt; ()) -&gt; ()"
+                  moduleName = "Emocrcy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///xcode-common/workspace/emocracy-iOS-wdh15/Emocrcy/AppDelegate.swift"
+                  timestampString = "456574431.517207"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "2164">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Emocrcy.AppDelegate.application (Emocrcy.AppDelegate)(ObjectiveC.UIApplication, handleActionWithIdentifier : Swift.Optional&lt;Swift.String&gt;, forLocalNotification : ObjectiveC.UILocalNotification, completionHandler : () -&gt; ()) -&gt; ()"
+                  moduleName = "Emocrcy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///xcode-common/workspace/emocracy-iOS-wdh15/Emocrcy/AppDelegate.swift"
+                  timestampString = "456574431.517512"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "2220">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Emocrcy.AppDelegate.application (Emocrcy.AppDelegate)(ObjectiveC.UIApplication, handleActionWithIdentifier : Swift.Optional&lt;Swift.String&gt;, forLocalNotification : ObjectiveC.UILocalNotification, completionHandler : () -&gt; ()) -&gt; ()"
+                  moduleName = "Emocrcy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///xcode-common/workspace/emocracy-iOS-wdh15/Emocrcy/AppDelegate.swift"
+                  timestampString = "456574431.517691"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "2316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Emocrcy/AppDelegate.swift"
+            timestampString = "456574431.493078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "application(_:handleActionWithIdentifier:forLocalNotification:completionHandler:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Emocrcy.AppDelegate.application (Emocrcy.AppDelegate)(ObjectiveC.UIApplication, handleActionWithIdentifier : Swift.Optional&lt;Swift.String&gt;, forLocalNotification : ObjectiveC.UILocalNotification, completionHandler : () -&gt; ()) -&gt; ()"
+                  moduleName = "Emocrcy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///xcode-common/workspace/emocracy-iOS-wdh15/Emocrcy/AppDelegate.swift"
+                  timestampString = "456574431.565784"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "2652">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Emocrcy.AppDelegate.application (Emocrcy.AppDelegate)(ObjectiveC.UIApplication, handleActionWithIdentifier : Swift.Optional&lt;Swift.String&gt;, forLocalNotification : ObjectiveC.UILocalNotification, completionHandler : () -&gt; ()) -&gt; ()"
+                  moduleName = "Emocrcy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///xcode-common/workspace/emocracy-iOS-wdh15/Emocrcy/AppDelegate.swift"
+                  timestampString = "456574431.56599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "2976">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Emocrcy.AppDelegate.application (Emocrcy.AppDelegate)(ObjectiveC.UIApplication, handleActionWithIdentifier : Swift.Optional&lt;Swift.String&gt;, forLocalNotification : ObjectiveC.UILocalNotification, completionHandler : () -&gt; ()) -&gt; ()"
+                  moduleName = "Emocrcy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///xcode-common/workspace/emocracy-iOS-wdh15/Emocrcy/AppDelegate.swift"
+                  timestampString = "456574431.56616"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "2980">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Emocrcy/AppDelegate.swift"
+            timestampString = "456574431.493078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "application(_:handleActionWithIdentifier:forLocalNotification:completionHandler:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

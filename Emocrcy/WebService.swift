@@ -136,10 +136,9 @@ class WebService: NSObject {
         UserDefaults.channels = incomingChannels
     }
     
-    static func vote(channel: Channel, answer: Int, callback: () -> Void) -> Void {
+    static func vote(channelId: Int, answer: Int, callback: () -> Void) -> Void {
         
-        if let userId = UserDefaults.userId,
-                let channelId = channel.id {
+        if let userId = UserDefaults.userId {
                     let url = "\(voteUrl)/\(userId)/\(channelId)/\(answer)"
             Alamofire.request(.GET, url).responseString { (_, _, s, _) in
                 callback()

@@ -78,7 +78,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        
+        println("\(identifier)")
+        println("\(notification.userInfo)")
+        println(notification.userInfo?["channelId"] as? Int)
+        switch (identifier, notification.userInfo?["channelId"] as? Int){
+        case let (.Some("decline"), .Some(channelId)):
+            println("will vote")
+            WebService.vote(channelId, answer: 0){
+                completionHandler()
+            }
+        case let (.Some("accept"), .Some(channelId)):
+            println("will vote")
+            WebService.vote(channelId, answer: 1){
+                completionHandler()
+            }
+            
+        default:
+            break
+        }
+        
+    }
 
 }
 
