@@ -25,9 +25,15 @@ class WebService: NSObject {
 
     static var sharedInstance: WebService!
     
+    static var manager: Alamofire.Manager = {
+        let configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier("wdh.emocracy")
+        let manager = Alamofire.Manager(configuration: configuration)
+        return manager
+        }()
+    
     static func setUpTimer(){
         self.sharedInstance = WebService()
-         self.sharedInstance.timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self.sharedInstance, selector: Selector("update"), userInfo: nil, repeats: true)
+         self.sharedInstance.timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self.sharedInstance, selector: Selector("update"), userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(self.sharedInstance.timer, forMode: NSDefaultRunLoopMode)
     }
     
@@ -40,7 +46,7 @@ class WebService: NSObject {
     
     
     static func getApi() {
-        Alamofire.request(.GET, baseUrl).responseString { (_, _, s, _) in
+        manager.request(.GET, baseUrl).responseString { (_, _, s, _) in
             if let json = s,
                 let response = Mapper<ApiResponse>().map(json),
                 let calls = response.calls {
@@ -53,7 +59,7 @@ class WebService: NSObject {
     }
     
     static func register(name: String, callback: User -> Void) -> Void {
-        Alamofire.request(.GET, "\(registerUrl)/\(name)").responseString { (_, _, s, _) in
+        manager.request(.GET, "\(registerUrl)/\(name)").responseString { (_, _, s, _) in
             if let json = s,
                 let user = Mapper<User>().map(json) {
                    callback(user)
@@ -64,7 +70,7 @@ class WebService: NSObject {
     
     static func channels(callback: [Channel] -> Void) -> Void {
         if let userId = UserDefaults.userId {
-            Alamofire.request(.GET, "\(channelUrl)/\(userId)").responseString { (_, _, s, _) in
+            manager.request(.GET, "\(channelUrl)/\(userId)").responseString { (_, _, s, _) in
                 if let json = s,
                     let channelcall = Mapper<ChannelCall>().map(json),
                     let channels = channelcall.channels {
@@ -109,7 +115,7 @@ class WebService: NSObject {
             // 1. pca == 0 && ca == 1
             // 2. pcd == 0 && cd == 1
             switch (pca, channelAlive, pcd, channelDemocracy) {
-            case (.Some(0), .Some(1), _, _):
+            case (.Some(0), .Some(1), _, _) where channel.id! != UserDefaults.lastVotedChannelId:
                 println("notify")
                 notifyAlive(channel.id!)
             case (_, _, .None, .Some(1)):
@@ -138,9 +144,10 @@ class WebService: NSObject {
     
     static func vote(channelId: Int, answer: Int, callback: () -> Void) -> Void {
         
+        UserDefaults.lastVotedChannelId = channelId
         if let userId = UserDefaults.userId {
                     let url = "\(voteUrl)/\(userId)/\(channelId)/\(answer)"
-            Alamofire.request(.GET, url).responseString { (_, _, s, _) in
+            manager.request(.GET, url).responseString { (_, _, s, _) in
                 callback()
             }
         }

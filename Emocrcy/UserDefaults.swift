@@ -15,7 +15,22 @@ public struct UserDefaults {
     private static let _username = "username"
     private static let _userId = "userId"
     private static let __channels = "channels"
+    private static let _lastVotedChannelId = "lastVotedChannelId"
+
     
+    public static var lastVotedChannelId: Int?{
+        get {
+        if let val = NSUserDefaults.standardUserDefaults().objectForKey(_lastVotedChannelId) as? Int{
+        return val
+        }
+        return nil
+        }
+        set(newValue) {
+            if let newValue = newValue {
+                NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey: _lastVotedChannelId)
+            }
+        }
+    }
     
     public static var channels: ChannelsMap? {
         get {
