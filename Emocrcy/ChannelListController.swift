@@ -117,24 +117,26 @@ class ChannelListController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.Cells.channelCell, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.Cells.channelCell, forIndexPath: indexPath) as! ChannelCell
         
         
         let channel = channels?[indexPath.row]
         if let name = channel?.name,
             let yes = channel?.yes,
             let no = channel?.no {
-                cell.textLabel?.text = name
-                cell.detailTextLabel?.text = "\(yes):\(no)"
+                cell.channelLabel?.text = name
+                cell.channelState?.text = "\(yes):\(no)"
         }
         
+        println("icon_\(channel?.id!)_white")
+        cell.channelImageView.image = UIImage(named: "icon_\(channel!.id!)_white")
         switch channel?.democracy {
         case .Some(1):
-            cell.backgroundColor = UIColor.greenColor()
+            cell.backgroundColor = UIColor.colorWithHexString("#00df90")!
         case .Some(0):
-            cell.backgroundColor = UIColor.redColor()
+            cell.backgroundColor = UIColor.colorWithHexString("#00df90")!
         default:
-            cell.backgroundColor = UIColor.whiteColor()
+            cell.backgroundColor = UIColor.colorWithHexString("#9d9d9d")!
         }
         return cell
     }
@@ -160,4 +162,13 @@ class ChannelListController: UITableViewController {
     }
     
     
+}
+
+
+class ChannelCell: UITableViewCell {
+    @IBOutlet weak var channelImageView: UIImageView!
+    
+    @IBOutlet weak var channelLabel: UILabel!
+    
+    @IBOutlet weak var channelState: UILabel!
 }
