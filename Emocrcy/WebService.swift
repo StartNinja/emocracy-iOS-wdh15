@@ -79,6 +79,14 @@ class WebService: NSObject {
     static let k_channelId = "channelId"
     static let k_channelAlive = "channelAlive"
     static let k_channelDemocracy = "channelDemocracy"
+    
+    static func notifyAlive(channelId: Int){
+       NSNotificationCenter.defaultCenter().postNotificationName("alive", object: nil, userInfo:["channel":channelId])
+    }
+    
+    static func notifyDemocracy(channelId: Int, democracy: Int){
+        NSNotificationCenter.defaultCenter().postNotificationName("democracy", object: nil, userInfo:["channel":channelId, "democracy":democracy])
+    }
 
     static func storeChannels(channels: [Channel]){
         
@@ -103,10 +111,13 @@ class WebService: NSObject {
             switch (pca, channelAlive, pcd, channelDemocracy) {
             case (.Some(0), .Some(1), _, _):
                 println("notify")
+                notifyAlive(channel.id!)
             case (_, _, .None, .Some(1)):
                 println("yes won")
+                notifyDemocracy(channel.id!, democracy:1)
             case (_, _, .None, .Some(0)):
                 println("no won")
+                notifyDemocracy(channel.id!, democracy:0)
             default:
                 break
             }

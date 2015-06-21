@@ -34,10 +34,33 @@ class ChannelListController: UITableViewController {
             if let dict = notification.userInfo as? [NSString:[Channel]],
                 let channels = dict["channels"] {
                 self.channels =  channels
-                println("did receive \(channels)")
+                    self.tableView.reloadData()
+                //println("did receive \(channels)")
             }
             return
         })
+        
+        NSNotificationCenter.defaultCenter().addObserverForName("alive", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: {
+             notification in
+            if let dict = notification.userInfo as? [String:Int],
+                let cid = dict["channel"]{
+            
+                println("channel with id \(cid) is alive")
+                
+            }
+        })
+        
+        NSNotificationCenter.defaultCenter().addObserverForName("democracy", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: {
+            notification in
+            if let dict = notification.userInfo as? [String:Int],
+                let cid = dict["channel"],
+             let democracy = dict["democracy"]{
+                    
+                    println("channel with id \(cid) has decided \(democracy)")
+                    
+            }
+        })
+        
     }
     
     override func viewDidAppear(animated: Bool) {
