@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-struct WebService {
+class WebService: NSObject {
     
     static let baseUrl = "http://192.168.170.47:8080/emocracy/api/"
     
@@ -21,7 +21,22 @@ struct WebService {
     static let voteUrl = "http://192.168.170.47:8080/emocracy/api/vote"
 
     
+    var timer: NSTimer!
+
+    static var sharedInstance: WebService!
     
+    static func setUpTimer(){
+        self.sharedInstance = WebService()
+         self.sharedInstance.timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self.sharedInstance, selector: Selector("update"), userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(self.sharedInstance.timer, forMode: NSDefaultRunLoopMode)
+    }
+    
+    func update(){
+        WebService.channels{ c in
+            NSNotificationCenter.defaultCenter().postNotificationName("channels", object: nil, userInfo:["channels":c])
+            return
+        }
+    }
     
     
     static func getApi() {
@@ -99,7 +114,7 @@ struct User: Mappable {
 "democracy": 1
 */
 
-struct Channel: Mappable {
+class Channel: Mappable {
     var name: String?
     var id: Int?
     var yes: Int?
@@ -109,11 +124,11 @@ struct Channel: Mappable {
     
     init(){}
     
-    init?(_ map: Map) {
+    required init?(_ map: Map) {
         mapping(map)
     }
     
-    mutating func mapping(map: Map) {
+    func mapping(map: Map) {
         name <- map["name"]
         id <- map["id"]
         yes <- map["yes"]

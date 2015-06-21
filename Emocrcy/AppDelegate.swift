@@ -42,6 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Sound | .Alert | .Badge, categories:categories))
 
+        
+        WebService.setUpTimer()
+        
         return true
     }
 

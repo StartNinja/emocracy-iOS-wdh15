@@ -20,8 +20,6 @@ class ChannelListController: UITableViewController {
         }
     }
     
-    var timer: NSTimer!
-    
     var channels: [Channel]?
     
     override func viewDidLoad() {
@@ -30,7 +28,16 @@ class ChannelListController: UITableViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.addTarget(self, action: "updateData:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl!)
-
+        
+        NSNotificationCenter.defaultCenter().addObserverForName("channels", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: {
+            notification in
+            if let dict = notification.userInfo as? [NSString:[Channel]],
+                let channels = dict["channels"] {
+                self.channels =  channels
+                println("did receive \(channels)")
+            }
+            return
+        })
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -43,15 +50,8 @@ class ChannelListController: UITableViewController {
         
        initData()
         
-        let selector : Selector = "initData"
-        //timer = NSTimer.scheduledTimerWithTimeInterval(10, target:self, selector: selector, userInfo: nil, repeats: true)
-        timer = NSTimer(timeInterval: 10, target: self, selector: "initData", userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
     }
-    
-    override func viewDidDisappear(animated: Bool) {
-        timer = nil
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
