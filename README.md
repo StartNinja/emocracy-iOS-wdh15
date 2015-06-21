@@ -50,8 +50,8 @@ Lots of Google and Apple Tech
 **Team:**
 Team members, their skills & Twitter handles:
 - Madhava Jay (front-end, back-end)
-- Elmar Kretzer (front-end, back-end)
-- Enrique (design)
-- Stavros Filippidis (back-end)
+- Elmar Kretzer (front-end, back-end)- Stavros Filippidis (back-end)
+- Enrique Leyva (design)
 
-<sup>&#42;</sup >*Names are random from https://randomuser.me/*
+
+
