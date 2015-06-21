@@ -23,8 +23,16 @@ Cool Graphics and Sound FX
  
 
 **Screenshot:** Please make a screenshot of your project and insert it here (use markdown)
-![Android](https://github.com/StartNinja/emocracy-iOS-wdh15/blob/master/documentation/IMG_4612.jpg?raw=true "AppleWatch")
-![Apple](https://github.com/StartNinja/emocracy-iOS-wdh15/blob/master/documentation/IMG_4627.jpg?raw=true"Apple Watch")
+
+![Android](https://github.com/StartNinja/emocracy-iOS-wdh15/blob/master/documentation/Android.png?raw=true" Apple Watch")
+![Android](https://github.com/StartNinja/emocracy-iOS-wdh15/blob/master/documentation/AndroidWear.png?raw=true "Apple Watch")
+![Apple](https://github.com/StartNinja/emocracy-iOS-wdh15/blob/master/documentation/iPhone.png?raw=true "Apple Watch")
+
+![Apple](https://github.com/StartNinja/emocracy-iOS-wdh15/blob/master/documentation/AppleWatch.png?raw=true "Apple Watch")
+
+
+
+
 
 **Type of the project:** Wearable / Mobile App
 
