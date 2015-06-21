@@ -78,6 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    
     func application(application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: () -> Void) {
         // this should be called when background requests got finished
         println("handleEventsForBackgroundURLSession \(identifier) ")

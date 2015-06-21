@@ -139,28 +139,29 @@ class ChannelListController: UITableViewController {
         }
         
         cell.channelImageView.image = UIImage(named: "icon_\(channel!.id!)_white")
-       
-        if let alive = channel?.alive where alive == 1 {
+        
+        
+        switch (channel?.democracy, channel?.alive) {
+        case (.Some(1), _):
+            UIView.animateWithDuration(0.3){
+                cell.backgroundColor = UIColor.colorWithHexString("#00df90")!
+            }
+            
+        case (.Some(0), _):
+            UIView.animateWithDuration(0.3){
+                cell.backgroundColor = UIColor.colorWithHexString("#ff0391")!
+            }
+            
+        case (.None, .Some(1)):
             UIView.animateWithDuration(0.3){
                 cell.backgroundColor = UIColor.colorWithHexString("#ffba00")!
             }
-        } else {
-            UIView.animateWithDuration(0.3){
-            cell.backgroundColor = UIColor.colorWithHexString("#9d9d9d")!
-            }
-        }
-        
-        switch channel?.democracy {
-        case .Some(1):
-            UIView.animateWithDuration(0.3){
-            cell.backgroundColor = UIColor.colorWithHexString("#00df90")!
-            }
-        case .Some(0):
-            UIView.animateWithDuration(0.3){
-            cell.backgroundColor = UIColor.colorWithHexString("#ff0391")!
-            }
+            
         default:
-            break
+            UIView.animateWithDuration(0.3){
+                cell.backgroundColor = UIColor.colorWithHexString("#9d9d9d")!
+            }
+            
         }
         return cell
     }
