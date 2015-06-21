@@ -22,6 +22,8 @@ struct WebService {
 
     
     
+    
+    
     static func getApi() {
         Alamofire.request(.GET, baseUrl).responseString { (_, _, s, _) in
             if let json = s,

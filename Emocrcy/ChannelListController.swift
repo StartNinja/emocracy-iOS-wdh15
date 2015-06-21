@@ -20,11 +20,9 @@ class ChannelListController: UITableViewController {
         }
     }
     
-    var channels: [Channel]? {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+    var timer: NSTimer!
+    
+    var channels: [Channel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +43,14 @@ class ChannelListController: UITableViewController {
         
        initData()
         
+        let selector : Selector = "initData"
+        //timer = NSTimer.scheduledTimerWithTimeInterval(10, target:self, selector: selector, userInfo: nil, repeats: true)
+        timer = NSTimer(timeInterval: 10, target: self, selector: "initData", userInfo: nil, repeats: true)
+        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        timer = nil
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,12 +60,9 @@ class ChannelListController: UITableViewController {
     func initData(){
         WebService.channels { [weak self] in
             self?.channels = $0
-            
-            
-
+            self?.tableView.reloadData()
         }
-        UILocalNotification.notify()
-
+        //UILocalNotification.notify()
     }
 
     // MARK: - Table view data source
