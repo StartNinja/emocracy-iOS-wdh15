@@ -11,14 +11,14 @@ import UIKit
 
 extension UILocalNotification {
     
-    static func notify(){
+    static func notify(title: String, body: String, channelId: Int){
         
         let notification = UILocalNotification()
-        notification.alertBody = "test"
+        notification.alertBody = body
         notification.fireDate = NSDate().dateByAddingTimeInterval(10)
         notification.timeZone = NSTimeZone.defaultTimeZone()
-        notification.alertTitle = "title"
-        notification.userInfo = ["test":"test"]
+        notification.alertTitle = title
+        notification.userInfo = ["channelId":channelId]
         notification.category = "invitation"
         notification.soundName = UILocalNotificationDefaultSoundName
         UIApplication.sharedApplication().scheduleLocalNotification(notification)

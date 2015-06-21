@@ -9,7 +9,7 @@
 import UIKit
 
 class ChannelListController: UITableViewController {
-
+    
     struct Storyboard {
         struct Segues {
             static let login = "login"
@@ -33,20 +33,24 @@ class ChannelListController: UITableViewController {
             notification in
             if let dict = notification.userInfo as? [NSString:[Channel]],
                 let channels = dict["channels"] {
-                self.channels =  channels
+                    self.channels =  channels
                     self.tableView.reloadData()
-                //println("did receive \(channels)")
             }
             return
         })
         
         NSNotificationCenter.defaultCenter().addObserverForName("alive", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: {
-             notification in
+            notification in
             if let dict = notification.userInfo as? [String:Int],
-                let cid = dict["channel"]{
-            
-                println("channel with id \(cid) is alive")
-                
+                let cid = dict["channel"],
+                let channels = self.channels?.filter({ $0.id! == cid }){
+                    
+                    println("channel with id \(cid) is alive")
+                    let channel = channels[0]
+                    
+                    let title = "\(channel.name)"
+                    let body = "What about you?"
+                    UILocalNotification.notify(title, body:body, channelId:cid)
             }
         })
         
@@ -54,8 +58,22 @@ class ChannelListController: UITableViewController {
             notification in
             if let dict = notification.userInfo as? [String:Int],
                 let cid = dict["channel"],
-             let democracy = dict["democracy"]{
+                let democracy = dict["democracy"],
+                let channels = self.channels?.filter({ $0.id! == cid }){
                     
+                    let channel = channels[0]
+                    let title = "\(channel.name)"
+                    
+                    let body: String
+                    switch democracy {
+                    case 0:
+                        body = "Has Lost"
+                    case 1:
+                        body = "Has Won"
+                    default:
+                        body = ""
+                    }
+                    UILocalNotification.notify(title, body:body, channelId:cid)
                     println("channel with id \(cid) has decided \(democracy)")
                     
             }
@@ -71,11 +89,11 @@ class ChannelListController: UITableViewController {
             return
         }
         
-       initData()
+        initData()
         
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -85,23 +103,22 @@ class ChannelListController: UITableViewController {
             self?.channels = $0
             self?.tableView.reloadData()
         }
-        //UILocalNotification.notify()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return channels?.count > 0 ? 1 : 0
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return channels?.count ?? 0
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.Cells.channelCell, forIndexPath: indexPath) as! UITableViewCell
-
+        
         
         let channel = channels?[indexPath.row]
         if let name = channel?.name,
@@ -121,16 +138,16 @@ class ChannelListController: UITableViewController {
         }
         return cell
     }
-
+    
     
     func updateData(sender: AnyObject){
         initData()
         refreshControl!.endRefreshing()
     }
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
@@ -141,6 +158,6 @@ class ChannelListController: UITableViewController {
         default: break
         }
     }
-
-
+    
+    
 }
